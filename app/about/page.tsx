@@ -10,25 +10,25 @@ export const metadata: Metadata = {
 
 const photos = [
   {
-    src: "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=800&q=80",
-    alt: "Michelle at the helm",
+    src: "/images/ai-lifestyle.png",
+    alt: "Walking back to Scirocco, K'gari",
     className: "row-span-2",
   },
   {
-    src: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
-    alt: "Sailing through waves",
+    src: "/images/adv-whitehaven.png",
+    alt: "Whitehaven Beach, Whitsundays",
   },
   {
-    src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    alt: "Tropical anchorage",
+    src: "/images/adv-hardy-reef.png",
+    alt: "Hardy Reef, outer Great Barrier Reef",
   },
   {
-    src: "https://images.unsplash.com/photo-1516815231560-8f41ec531527?auto=format&fit=crop&w=800&q=80",
-    alt: "Greek island sunset",
+    src: "/images/adv-nara-inlet.png",
+    alt: "Nara Inlet, Hook Island",
   },
   {
-    src: "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=800&q=80",
-    alt: "Boat at anchor",
+    src: "/images/adv-noosa.png",
+    alt: "Laguna Bay, Noosa",
   },
 ];
 
@@ -58,24 +58,30 @@ export default function AboutPage() {
               Hi, I&apos;m Michelle.
             </h1>
             <p className="text-gray-600 text-xl leading-relaxed mb-6">
-              Sailor, photographer, and firm believer that the best sunsets are
+              Boater, photographer, and firm believer that the best sunsets are
               always seen from the water.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              I&apos;ve been living aboard my 42-foot sloop,{" "}
-              <em className="text-navy font-medium">Blue Meridian</em>, since
-              2020. Before that, I was a travel photographer based in Melbourne —
-              still doing that, just from a slightly saltier office.
+              I&apos;ve been living aboard my motor cruiser,{" "}
+              <em
+                className="font-medium"
+                style={{ color: "var(--color-navy)" }}
+              >
+                Scirocco
+              </em>
+              , since 2020. Before that I was a travel photographer based in
+              Brisbane — still doing that, just from a slightly saltier office.
             </p>
           </div>
 
           <div className="relative">
             <div className="aspect-square relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=900&q=85"
-                alt="Michelle on Blue Meridian"
+                src="/images/ai-about.png"
+                alt="Michelle at the rail of Scirocco, Queensland coast"
                 fill
                 priority
+                sizes="(min-width: 768px) 50vw, 100vw"
                 className="object-cover"
               />
             </div>
@@ -83,7 +89,7 @@ export default function AboutPage() {
               className="absolute -top-4 -left-4 text-white rounded-xl px-4 py-3 text-sm font-semibold shadow-lg"
               style={{ backgroundColor: "var(--color-teal)" }}
             >
-              🛥 Blue Meridian, 42ft
+              🛥 Scirocco
             </div>
           </div>
         </div>
@@ -109,29 +115,36 @@ export default function AboutPage() {
 
         <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
           <p>
-            I grew up in a landlocked city in the Australian outback, which
-            meant the ocean was always something I visited, never something I
-            lived beside. I took sailing lessons at 25 on a whim and spent the
-            next few years learning everything I could about blue-water passage
-            making.
+            I grew up in Brisbane, which meant the ocean was always close but
+            never quite close enough. I got my boat licence at 25 on a whim and
+            spent the next few years learning everything I could about engines,
+            navigation, and the slightly unhinged community of people who
+            choose to call a boat home.
           </p>
           <p>
-            In early 2020, I bought Blue Meridian — sight unseen, from a
-            blurry Craigslist photo — flew to the Mediterranean, and spent six
-            months refitting her with the help of very patient boatyard workers
-            who did not speak much English. My Spanish got very good. My
-            plumbing skills got excellent.
+            In early 2020, I bought{" "}
+            <em
+              className="not-italic font-medium"
+              style={{ color: "var(--color-navy)" }}
+            >
+              Scirocco
+            </em>{" "}
+            — sight unseen, from a blurry marketplace listing down at the Gold
+            Coast — and spent six months fixing the bits I hadn&apos;t noticed
+            were broken. I got very good at diesel troubleshooting. I got
+            excellent at plumbing.
           </p>
           <p>
-            The plan was to sail for a year. That was four years ago. I&apos;ve
-            covered over 28,000 nautical miles, visited 47 countries, and made
-            more friends in marinas and anchorages than I did in a decade of
-            regular life.
+            The plan was to cruise up the coast for a year. That was four years
+            ago. Since then we&apos;ve pottered between the Whitsundays,
+            K&apos;gari, Moreton Bay and a dozen little SEQ anchorages in
+            between, and made more friends in marinas than I did in a decade of
+            regular life on land.
           </p>
           <p>
-            This site is my attempt to document it — the places, the people, the
-            light, and the feeling of waking up somewhere new and not knowing
-            quite where you are yet.
+            This site is my attempt to document it — the places, the people,
+            the light, and the feeling of waking up somewhere new and not quite
+            knowing where you are yet.
           </p>
         </div>
 
@@ -205,11 +218,11 @@ export default function AboutPage() {
             </h2>
             <div className="grid grid-cols-2 gap-6">
               {[
-                { value: "47", label: "Countries visited" },
-                { value: "28,400", label: "Nautical miles" },
-                { value: "12", label: "Ocean crossings" },
-                { value: "340+", label: "Anchorages" },
-                { value: "4", label: "Years liveaboard" },
+                { value: "18,200", label: "Nautical miles" },
+                { value: "4", label: "Trips to the Whitsundays" },
+                { value: "220+", label: "Anchorages" },
+                { value: "47", label: "Marina showers" },
+                { value: "4 yrs", label: "Liveaboard" },
                 { value: "1", label: "Very good boat" },
               ].map(({ value, label }) => (
                 <div key={label}>
@@ -230,20 +243,23 @@ export default function AboutPage() {
 
           <div className="relative rounded-2xl overflow-hidden h-96">
             <Image
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80"
-              alt="Blue Meridian underway"
+              src="/images/ai-lifestyle.png"
+              alt="Scirocco anchored off K'gari"
               fill
+              sizes="(min-width: 768px) 50vw, 100vw"
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             <div className="absolute bottom-6 left-6 text-white">
               <p
                 className="text-2xl font-bold"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                Blue Meridian
+                Scirocco
               </p>
-              <p className="text-white/80 text-sm">Bavaria 42, 2009</p>
+              <p className="text-sm" style={{ color: "rgba(255,255,255,0.8)" }}>
+                Motor cruiser &bull; Home since 2020
+              </p>
             </div>
           </div>
         </div>

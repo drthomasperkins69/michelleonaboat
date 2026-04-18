@@ -5,7 +5,7 @@ import { adventures } from "@/lib/adventures";
 export const metadata: Metadata = {
   title: "Adventures",
   description:
-    "Photo journals and sailing dispatches from around the world — Greece, Croatia, the Atlantic, the Pacific, and beyond.",
+    "Photo journals from South East Queensland, the Whitsundays, and the Great Barrier Reef — every anchorage tells a story.",
 };
 
 export default function AdventuresPage() {
@@ -32,7 +32,7 @@ export default function AdventuresPage() {
           Adventures
         </h1>
         <p className="text-gray-600 text-xl max-w-2xl mx-auto leading-relaxed">
-          From Mediterranean anchorages to Atlantic crossings — every voyage
+          From Moreton Bay sandflats to Whitsundays reefs — every anchorage
           tells a story. Browse the full collection below.
         </p>
       </section>

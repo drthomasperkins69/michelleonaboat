@@ -28,7 +28,7 @@ export default function Navbar() {
             className="font-display text-xl font-bold text-navy tracking-tight"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Michelle on a Boat
+            Boatlatina
           </span>
         </Link>
 

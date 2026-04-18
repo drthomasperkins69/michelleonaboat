@@ -11,10 +11,11 @@ export default function Home() {
       {/* Hero */}
       <section className="relative h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2000&q=85"
-          alt="Sailboat on a golden ocean at sunset"
+          src="/images/ai-hero.png"
+          alt="Michelle on the bow of Scirocco at golden hour"
           fill
           priority
+          sizes="100vw"
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-navy/30 via-navy/40 to-navy/70" />
@@ -32,8 +33,8 @@ export default function Home() {
             <em className="not-italic" style={{ color: "var(--color-teal-light)" }}>Open Water</em>
           </h1>
           <p className="text-xl md:text-2xl mb-10 leading-relaxed max-w-2xl mx-auto" style={{ color: "rgba(255,255,255,0.85)" }}>
-            Sailing the world one anchorage at a time — photo journals from the
-            seas, coastlines, and hidden harbours I call home.
+            Cruising the Queensland coast one anchorage at a time — photo
+            journals from the reefs, islands, and hidden harbours I call home.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -76,10 +77,10 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { value: "47", label: "Countries" },
-              { value: "28k+", label: "Miles Sailed" },
-              { value: "12", label: "Crossings" },
+              { value: "18k+", label: "Nautical Miles" },
+              { value: "220+", label: "Anchorages" },
               { value: "4 yrs", label: "Liveaboard" },
+              { value: "1", label: "Very Good Boat" },
             ].map(({ value, label }) => (
               <div key={label}>
                 <div
@@ -229,9 +230,10 @@ export default function Home() {
           <div className="relative">
             <div className="aspect-[4/5] relative rounded-2xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=800&q=80"
-                alt="Michelle on the water"
+                src="/images/ai-about.png"
+                alt="Michelle at the rail of Scirocco, looking out at the Queensland coast"
                 fill
+                sizes="(min-width: 768px) 50vw, 100vw"
                 className="object-cover"
               />
             </div>
@@ -242,7 +244,7 @@ export default function Home() {
               >
                 Since 2020
               </div>
-              <div className="text-sm mt-1" style={{ color: "rgba(255,255,255,0.9)" }}>Sailing full-time</div>
+              <div className="text-sm mt-1" style={{ color: "rgba(255,255,255,0.9)" }}>On the water full-time</div>
             </div>
           </div>
 
@@ -258,12 +260,13 @@ export default function Home() {
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed mb-6">
               I traded my apartment keys for anchor chain in 2020, and I&apos;ve
-              never looked back. What started as a sabbatical became a life — one
-              I document through photos, journals, and occasionally terrible
-              seasickness.
+              never looked back. What started as a sabbatical on{" "}
+              <em className="not-italic font-medium" style={{ color: "var(--color-navy)" }}>Scirocco</em>{" "}
+              became a life — one I document through photos, journals, and
+              occasionally terrible seasickness.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
-              This is where I share it all. The sunsets and the squalls, the
+              This is where I share it all. The sunrises and the squalls, the
               hidden anchorages and the crowded marinas, the people I meet and the
               places that stay with me long after the anchor is up.
             </p>
@@ -281,11 +284,12 @@ export default function Home() {
 
       {/* CTA */}
       <section className="py-24 px-6 relative overflow-hidden" style={{ backgroundColor: "var(--color-navy)" }}>
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 opacity-30">
           <Image
-            src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&w=2000&q=60"
+            src="/images/ai-cta-bg.png"
             alt=""
             fill
+            sizes="100vw"
             className="object-cover"
           />
         </div>
@@ -295,11 +299,11 @@ export default function Home() {
             className="text-4xl md:text-5xl font-bold mb-4"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Come Sail Along
+            Come Cruise Along
           </h2>
           <p className="text-lg mb-10 leading-relaxed" style={{ color: "rgba(255,255,255,0.75)" }}>
-            New adventures, photo journals, and sailing dispatches — sent
-            whenever I manage to find decent WiFi at sea.
+            New adventures, photo journals, and dispatches from the coast —
+            sent whenever I manage to find decent WiFi at anchor.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
             <input

@@ -12,7 +12,7 @@ export default function Footer() {
                 className="text-xl font-bold tracking-tight"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                Michelle on a Boat
+                Boatlatina
               </span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
@@ -88,7 +88,7 @@ export default function Footer() {
               ))}
             </div>
             <p className="text-gray-400 text-xs mt-6">
-              © {new Date().getFullYear()} Michelle on a Boat. All rights
+              © {new Date().getFullYear()} Boatlatina. All rights
               reserved.
             </p>
           </div>

@@ -17,18 +17,16 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Michelle on a Boat",
-    template: "%s | Michelle on a Boat",
+    default: "Boatlatina",
+    template: "%s | Boatlatina",
   },
   description:
-    "A photo journal of life on the water — sailing, exploring, and living the adventure.",
+    "A photo journal of life on the water — cruising the Queensland coast and the Whitsundays aboard Scirocco.",
   openGraph: {
-    title: "Michelle on a Boat",
+    title: "Boatlatina",
     description:
-      "A photo journal of life on the water — sailing, exploring, and living the adventure.",
-    images: [
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
-    ],
+      "A photo journal of life on the water — cruising the Queensland coast and the Whitsundays aboard Scirocco.",
+    images: ["/images/ai-hero.png"],
   },
 };
 

@@ -14,10 +14,11 @@ export default function ContactPage() {
       {/* Hero */}
       <section className="relative py-32 px-6 overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=2000&q=75"
-          alt="Open ocean sailing"
+          src="/images/ai-contact-hero.png"
+          alt="Golden-hour Queensland coastline"
           fill
           priority
+          sizes="100vw"
           className="object-cover"
         />
         <div
@@ -79,7 +80,7 @@ export default function ContactPage() {
                 {
                   icon: "▶",
                   label: "YouTube",
-                  value: "Michelle on a Boat",
+                  value: "Boatlatina",
                   href: "#",
                 },
               ].map(({ icon, label, value, href }) => (
@@ -120,8 +121,8 @@ export default function ContactPage() {
                 📍 Current location
               </p>
               <p className="text-gray-600 text-sm">
-                Somewhere in the Mediterranean — check Instagram for the latest
-                coordinates.
+                Somewhere between Moreton Bay and the Whitsundays — check
+                Instagram for the latest coordinates.
               </p>
             </div>
           </div>
@@ -146,8 +147,8 @@ export default function ContactPage() {
           <div className="space-y-6">
             {[
               {
-                q: "Can I come sailing with you?",
-                a: "Sometimes! I occasionally take on crew for longer passages. If you're experienced and up for an adventure, send me a message and let's chat.",
+                q: "Can I come cruising with you?",
+                a: "Sometimes! I occasionally take on crew for longer passages up the Queensland coast. If you're experienced and up for an adventure, send me a message and let's chat.",
               },
               {
                 q: "Do you do photography commissions?",

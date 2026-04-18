@@ -89,7 +89,7 @@ export default function ContactForm() {
           <option>Just saying hi 👋</option>
           <option>Photography inquiry</option>
           <option>Brand collaboration</option>
-          <option>Crew / sailing together</option>
+          <option>Crew / cruising together</option>
           <option>Media / press</option>
           <option>Other</option>
         </select>

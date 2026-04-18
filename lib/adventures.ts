@@ -3,7 +3,7 @@ export type Adventure = {
   title: string;
   location: string;
   country: string;
-  region: "Mediterranean" | "Atlantic" | "Pacific" | "Caribbean" | "Northern Europe";
+  region: "Whitsundays" | "South East Queensland" | "Great Barrier Reef";
   date: string;
   description: string;
   image: string;
@@ -12,159 +12,123 @@ export type Adventure = {
 
 export const adventures: Adventure[] = [
   {
-    id: "greek-cyclades",
-    title: "The Cyclades",
-    location: "Santorini & Mykonos, Greece",
-    country: "Greece",
-    region: "Mediterranean",
-    date: "July 2024",
+    id: "whitehaven-beach",
+    title: "Whitehaven Beach",
+    location: "Whitsunday Island, QLD",
+    country: "Australia",
+    region: "Whitsundays",
+    date: "July 2025",
     description:
-      "White-washed walls, cobalt domes, and water so blue it looks painted. Hopped between islands for three weeks and never wanted to leave.",
-    image:
-      "https://images.unsplash.com/photo-1516815231560-8f41ec531527?auto=format&fit=crop&w=800&q=80",
+      "Pure white silica sand swirling into pale turquoise shallows. We anchored at Hill Inlet and stayed three days — no reception, no hurry, just unreal water.",
+    image: "/images/adv-whitehaven.png",
     featured: true,
   },
   {
-    id: "adriatic-croatia",
-    title: "The Adriatic",
-    location: "Dubrovnik to Split, Croatia",
-    country: "Croatia",
-    region: "Mediterranean",
-    date: "June 2024",
+    id: "hardy-reef",
+    title: "Hardy Reef",
+    location: "Outer Great Barrier Reef, QLD",
+    country: "Australia",
+    region: "Great Barrier Reef",
+    date: "July 2025",
     description:
-      "Crystal clear Adriatic waters, historic walled cities, and hidden island coves. Croatia by sailboat is something else entirely.",
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+      "Moored out on the edge of the reef. Snorkelled at dawn with turtles and reef sharks, then watched the sun come up from the flybridge with a coffee.",
+    image: "/images/adv-hardy-reef.png",
     featured: true,
   },
   {
-    id: "atlantic-crossing",
-    title: "Atlantic Crossing",
-    location: "Azores to Bermuda",
-    country: "Azores / Bermuda",
-    region: "Atlantic",
-    date: "May 2024",
+    id: "hook-island-nara",
+    title: "Nara Inlet",
+    location: "Hook Island, Whitsundays",
+    country: "Australia",
+    region: "Whitsundays",
+    date: "June 2025",
     description:
-      "11 days of open ocean, nothing but sky and sea. The kind of crossing that resets something deep inside you.",
-    image:
-      "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=800&q=80",
+      "A steep green fjord-like inlet tucked into Hook Island. Glassy water, waterfalls after the rain, and absolutely nobody else for a full 24 hours.",
+    image: "/images/adv-nara-inlet.png",
     featured: true,
   },
   {
-    id: "caribbean-st-lucia",
-    title: "St. Lucia Dreams",
-    location: "St. Lucia",
-    country: "St. Lucia",
-    region: "Caribbean",
-    date: "March 2024",
+    id: "hamilton-island",
+    title: "Hamilton Island",
+    location: "Whitsundays, QLD",
+    country: "Australia",
+    region: "Whitsundays",
+    date: "June 2025",
     description:
-      "Anchored beneath the Pitons with rum punch in hand. The Caribbean never disappoints when you arrive by sea.",
-    image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+      "Pulled into the marina after a week off-grid. Long shower, cold sav blanc at the yacht club, restock. The bougie reset your body needs.",
+    image: "/images/adv-hamilton-island.png",
   },
   {
-    id: "norwegian-fjords",
-    title: "Norwegian Fjords",
-    location: "Bergen to Geirangerfjord",
-    country: "Norway",
-    region: "Northern Europe",
-    date: "August 2023",
+    id: "tangalooma-wrecks",
+    title: "The Tangalooma Wrecks",
+    location: "Moreton Island, QLD",
+    country: "Australia",
+    region: "South East Queensland",
+    date: "April 2025",
     description:
-      "Dramatic cliffs, waterfalls, and the most dramatic scenery I've ever sailed through. Cold? Yes. Worth it? Absolutely.",
-    image:
-      "https://images.unsplash.com/photo-1504851149312-7a075b496cc7?auto=format&fit=crop&w=800&q=80",
+      "Fifteen rusting hulls sunk in line as a breakwater, now a snorkelling wonderland. Anchored right alongside and had the water to ourselves by 6am.",
+    image: "/images/adv-tangalooma.png",
   },
   {
-    id: "turkish-coast",
-    title: "Turquoise Coast",
-    location: "Bodrum to Göcek, Turkey",
-    country: "Turkey",
-    region: "Mediterranean",
-    date: "September 2023",
+    id: "straddie",
+    title: "Straddie",
+    location: "North Stradbroke Island, QLD",
+    country: "Australia",
+    region: "South East Queensland",
+    date: "March 2025",
     description:
-      "Ancient ruins, pine-covered hills, and water so turquoise it's surreal. The Turkish Riviera from the water is magic.",
-    image:
-      "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=800&q=80",
+      "Pandanus on the dunes, long empty beaches, dolphins that follow you between Amity and Dunwich. My favourite weekend bolthole from Brisbane.",
+    image: "/images/adv-straddie.png",
   },
   {
-    id: "nz-bay-of-islands",
-    title: "Bay of Islands",
-    location: "Northland, New Zealand",
-    country: "New Zealand",
-    region: "Pacific",
-    date: "February 2024",
+    id: "kgari",
+    title: "K'gari",
+    location: "Fraser Island, QLD",
+    country: "Australia",
+    region: "South East Queensland",
+    date: "May 2025",
     description:
-      "144 islands, dolphins riding the bow wave at sunrise, and the warmest welcome from Kiwi sailors.",
-    image:
-      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=800&q=80",
+      "The world's largest sand island, best seen from the water — those honey-coloured cliffs running for miles, and the wreck of the Maheno at golden hour.",
+    image: "/images/adv-kgari.png",
   },
   {
-    id: "portuguese-coast",
-    title: "Portuguese Coast",
-    location: "Lisbon to Lagos",
-    country: "Portugal",
-    region: "Atlantic",
-    date: "April 2024",
+    id: "great-sandy-strait",
+    title: "Great Sandy Strait",
+    location: "Between K'gari & the mainland, QLD",
+    country: "Australia",
+    region: "South East Queensland",
+    date: "May 2025",
     description:
-      "Sardine grills in harbor towns, azulejo tiles, and the best pastéis de nata you've ever tasted after a long sail.",
-    image:
-      "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&w=800&q=80",
+      "The shallow, mangrove-lined passage inside K'gari. Shoal-hopping by day, still-as-glass anchorages by night, and pelicans for company.",
+    image: "/images/adv-sandy-strait.png",
   },
   {
-    id: "bora-bora",
-    title: "Bora Bora",
-    location: "Society Islands, French Polynesia",
-    country: "French Polynesia",
-    region: "Pacific",
-    date: "January 2024",
+    id: "noosa",
+    title: "Laguna Bay",
+    location: "Noosa, QLD",
+    country: "Australia",
+    region: "South East Queensland",
+    date: "February 2025",
     description:
-      "The lagoon. My god, the lagoon. Every shade of blue you can imagine, and then some. Pinch-me moments, daily.",
-    image:
-      "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=800&q=80",
+      "Anchored off Main Beach with the Noosa headland for a backdrop. Long-lunch-at-the-yacht-club kind of place. Always a few too many rosés.",
+    image: "/images/adv-noosa.png",
   },
   {
-    id: "sardinia",
-    title: "Sardinian Wild",
-    location: "Sardinia, Italy",
-    country: "Italy",
-    region: "Mediterranean",
-    date: "August 2024",
+    id: "lady-musgrave",
+    title: "Lady Musgrave",
+    location: "Southern Great Barrier Reef, QLD",
+    country: "Australia",
+    region: "Great Barrier Reef",
+    date: "October 2024",
     description:
-      "Untouched beaches only reachable by sea, pasta made by grandmothers, and Sardinian wine at anchor. Perfetto.",
-    image:
-      "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "sailing-action",
-    title: "Open Water",
-    location: "Bay of Biscay",
-    country: "France / Spain",
-    region: "Atlantic",
-    date: "October 2023",
-    description:
-      "Twenty knots of breeze, a close-hauled reach, and the boat singing through it. Days like this are what it's all about.",
-    image:
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: "british-columbia",
-    title: "BC Coast",
-    location: "Vancouver to Desolation Sound",
-    country: "Canada",
-    region: "Pacific",
-    date: "July 2023",
-    description:
-      "Eagles, orcas, and silence that stretches for miles. The Pacific Northwest coastline is unlike anywhere else on earth.",
-    image:
-      "https://images.unsplash.com/photo-1488415032361-b7e238421f1b?auto=format&fit=crop&w=800&q=80",
+      "A coral cay lagoon you can anchor inside. Turtles and reef sharks at the bommies, pisonia-forested island in the middle. Absolute Eden.",
+    image: "/images/adv-lady-musgrave.png",
   },
 ];
 
 export const regions = [
   "All",
-  "Mediterranean",
-  "Atlantic",
-  "Pacific",
-  "Caribbean",
-  "Northern Europe",
+  "Whitsundays",
+  "South East Queensland",
+  "Great Barrier Reef",
 ] as const;
