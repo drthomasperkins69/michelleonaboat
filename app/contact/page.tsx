@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import ContactForm from "./ContactForm";
+import { boat, seller } from "@/lib/boat";
 
 export const metadata: Metadata = {
-  title: "Contact",
-  description:
-    "Get in touch with Michelle — for collaborations, questions, or just to say hi from wherever you are on this planet.",
+  title: "Contact & Inspections",
+  description: `Arrange an inspection of ${boat.name}. ${seller.inspections}. Contact ${seller.name} on ${seller.phone}.`,
 };
 
 export default function ContactPage() {
@@ -14,31 +14,24 @@ export default function ContactPage() {
       {/* Hero */}
       <section className="relative py-32 px-6 overflow-hidden">
         <Image
-          src="/images/ai-contact-hero.png"
-          alt="Golden-hour Queensland coastline"
+          src="/images/scirocco-3.jpg"
+          alt={`${boat.name} at ${boat.berth}`}
           fill
           priority
           sizes="100vw"
           className="object-cover"
         />
-        <div
-          className="absolute inset-0"
-          style={{ backgroundColor: "rgba(15,45,78,0.7)" }}
-        />
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(15,45,78,0.7)" }} />
         <div className="relative z-10 text-center text-white max-w-2xl mx-auto">
           <p className="text-sm font-semibold uppercase tracking-widest mb-4" style={{ color: "var(--color-teal-light)" }}>
-            Say Hello
+            Enquiries & Inspections
           </p>
-          <h1
-            className="text-5xl md:text-6xl font-bold mb-6"
-            style={{ fontFamily: "var(--font-display)" }}
-          >
+          <h1 className="text-5xl md:text-6xl font-bold mb-6" style={{ fontFamily: "var(--font-display)" }}>
             Get in Touch
           </h1>
-          <p className="text-xl leading-relaxed" style={{ color: "rgba(255,255,255,0.8)" }}>
-            I&apos;d love to hear from you — whether you&apos;re a fellow
-            sailor, a reader, a brand wanting to collaborate, or just someone
-            who spotted my boat in a marina.
+          <p className="text-xl leading-relaxed" style={{ color: "rgba(255,255,255,0.85)" }}>
+            {seller.inspections} at {boat.berth}. Send an enquiry below or call{" "}
+            {seller.name} directly to arrange a time to come aboard.
           </p>
         </div>
       </section>
@@ -50,79 +43,80 @@ export default function ContactPage() {
           <div>
             <h2
               className="text-3xl font-bold mb-6"
-              style={{
-                fontFamily: "var(--font-display)",
-                color: "var(--color-navy)",
-              }}
+              style={{ fontFamily: "var(--font-display)", color: "var(--color-navy)" }}
             >
-              Let&apos;s Connect
+              Contact the Seller
             </h2>
             <p className="text-gray-600 leading-relaxed mb-8">
-              I&apos;m usually somewhere between a marina and an anchorage, but
-              I check email whenever the satellite connection cooperates. Drop me
-              a message and I&apos;ll get back to you as soon as I can.
+              Serious enquiries welcome. {boat.name} is a {boat.model} ({boat.year})
+              and is priced at {boat.price} {boat.currency}. Reach out any time —
+              inspections are held on Sunday afternoons.
             </p>
 
             <div className="space-y-6">
               {[
                 {
-                  icon: "📧",
-                  label: "Email",
-                  value: "hello@michelleonaboat.com",
-                  href: "mailto:hello@michelleonaboat.com",
+                  icon: "👤",
+                  label: "Seller",
+                  value: seller.name,
+                  href: undefined as string | undefined,
                 },
                 {
-                  icon: "📸",
-                  label: "Instagram",
-                  value: "@michelleonaboat",
-                  href: "#",
+                  icon: "📞",
+                  label: "Phone",
+                  value: seller.phone,
+                  href: seller.phoneHref,
                 },
                 {
-                  icon: "▶",
-                  label: "YouTube",
-                  value: "Boatlatina",
-                  href: "#",
+                  icon: "📍",
+                  label: "Berth",
+                  value: boat.berth,
+                  href: undefined,
                 },
-              ].map(({ icon, label, value, href }) => (
-                <a
-                  key={label}
-                  href={href}
-                  className="flex items-center gap-4 group"
-                >
-                  <div
-                    className="w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0 group-hover:scale-110 transition-transform"
-                    style={{ backgroundColor: "var(--color-cream)" }}
-                  >
-                    {icon}
-                  </div>
-                  <div>
-                    <p className="text-xs text-gray-400 font-medium uppercase tracking-widest mb-0.5">
-                      {label}
-                    </p>
-                    <p
-                      className="font-semibold group-hover:underline"
-                      style={{ color: "var(--color-navy)" }}
+                {
+                  icon: "🗓",
+                  label: "Inspections",
+                  value: "Sunday afternoons",
+                  href: undefined,
+                },
+              ].map(({ icon, label, value, href }) => {
+                const inner = (
+                  <>
+                    <div
+                      className="w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0 group-hover:scale-110 transition-transform"
+                      style={{ backgroundColor: "var(--color-cream)" }}
                     >
-                      {value}
-                    </p>
+                      {icon}
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-400 font-medium uppercase tracking-widest mb-0.5">
+                        {label}
+                      </p>
+                      <p className="font-semibold" style={{ color: "var(--color-navy)" }}>
+                        {value}
+                      </p>
+                    </div>
+                  </>
+                );
+                return href ? (
+                  <a key={label} href={href} className="flex items-center gap-4 group">
+                    {inner}
+                  </a>
+                ) : (
+                  <div key={label} className="flex items-center gap-4 group">
+                    {inner}
                   </div>
-                </a>
-              ))}
+                );
+              })}
             </div>
 
-            <div
-              className="mt-12 rounded-2xl p-6"
-              style={{ backgroundColor: "var(--color-cream)" }}
-            >
-              <p
-                className="font-semibold mb-2"
-                style={{ color: "var(--color-navy)" }}
-              >
-                📍 Current location
+            <div className="mt-12 rounded-2xl p-6" style={{ backgroundColor: "var(--color-cream)" }}>
+              <p className="font-semibold mb-2" style={{ color: "var(--color-navy)" }}>
+                💲 Asking price
               </p>
               <p className="text-gray-600 text-sm">
-                Somewhere between Moreton Bay and the Whitsundays — check
-                Instagram for the latest coordinates.
+                {boat.price} {boat.currency} — a 51ft {boat.model} Mediterranean
+                cruiser, recently and completely overhauled.
               </p>
             </div>
           </div>
@@ -137,40 +131,31 @@ export default function ContactPage() {
         <div className="max-w-3xl mx-auto">
           <h2
             className="text-3xl font-bold mb-10 text-center"
-            style={{
-              fontFamily: "var(--font-display)",
-              color: "var(--color-navy)",
-            }}
+            style={{ fontFamily: "var(--font-display)", color: "var(--color-navy)" }}
           >
             Frequently Asked
           </h2>
           <div className="space-y-6">
             {[
               {
-                q: "Can I come cruising with you?",
-                a: "Sometimes! I occasionally take on crew for longer passages up the Queensland coast. If you're experienced and up for an adventure, send me a message and let's chat.",
+                q: "Can I inspect the boat?",
+                a: `Yes — ${seller.name} holds inspections on Sunday afternoons at ${boat.berth}. Call ${seller.phone} to book a time.`,
               },
               {
-                q: "Do you do photography commissions?",
-                a: "Yes, I'm available for destination, travel, and brand photography — especially anything nautical. My rates are reasonable and I'll probably be there anyway.",
+                q: "What's the asking price?",
+                a: `${boat.price} ${boat.currency}.`,
               },
               {
-                q: "What camera gear do you use?",
-                a: "I shoot with a Sony A7IV and a small collection of lenses I've carefully curated to fit in a waterproof pelican case. The iPhone does most of the work, honestly.",
+                q: "What work has recently been done?",
+                a: "Scirocco has just had a complete overhaul: new electrics, an engine rebuild, a new fuel tank, the hull completely sanded and repainted, a refurbished generator, a new electrical distribution system, and all plumbing redone.",
               },
               {
-                q: "Can I use your photos?",
-                a: "Please reach out before using any images. For editorial use, I'm usually very accommodating. For commercial use, let's talk licensing.",
+                q: "What's included in the sale?",
+                a: "The sale includes a 5m x 5m inflatable pool, entertainment system, TV, Starlink internet and an electric BBQ — along with everything that makes her a comfortable liveaboard.",
               },
             ].map(({ q, a }) => (
-              <div
-                key={q}
-                className="bg-white rounded-2xl p-6 shadow-sm"
-              >
-                <h3
-                  className="font-bold mb-2"
-                  style={{ color: "var(--color-navy)" }}
-                >
+              <div key={q} className="bg-white rounded-2xl p-6 shadow-sm">
+                <h3 className="font-bold mb-2" style={{ color: "var(--color-navy)" }}>
                   {q}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{a}</p>

@@ -26,11 +26,11 @@ export default function ContactForm() {
             color: "var(--color-navy)",
           }}
         >
-          Message Sent!
+          Enquiry Sent!
         </h3>
         <p className="text-gray-600 leading-relaxed max-w-sm">
-          Thanks for reaching out — I&apos;ll get back to you as soon as I
-          find a marina with decent WiFi. ⚓
+          Thanks for your interest in Scirocco — Thomas will be in touch to
+          arrange an inspection. ⚓
         </p>
       </div>
     );
@@ -86,11 +86,10 @@ export default function ContactForm() {
           id="subject"
           className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:border-transparent transition-all"
         >
-          <option>Just saying hi 👋</option>
-          <option>Photography inquiry</option>
-          <option>Brand collaboration</option>
-          <option>Crew / cruising together</option>
-          <option>Media / press</option>
+          <option>Book an inspection 🗓</option>
+          <option>General enquiry</option>
+          <option>Question about specifications</option>
+          <option>Make an offer</option>
           <option>Other</option>
         </select>
       </div>
@@ -107,7 +106,7 @@ export default function ContactForm() {
           id="message"
           required
           rows={6}
-          placeholder="Tell me what's on your mind..."
+          placeholder="Let us know what you'd like to ask about Scirocco..."
           className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:border-transparent transition-all resize-none"
         />
       </div>
@@ -118,7 +117,7 @@ export default function ContactForm() {
         className="w-full text-white font-semibold py-4 rounded-xl transition-all duration-200 text-sm tracking-wide disabled:opacity-70"
         style={{ backgroundColor: "var(--color-navy)" }}
       >
-        {loading ? "Sending…" : "Send Message"}
+        {loading ? "Sending…" : "Send Enquiry"}
       </button>
     </form>
   );
