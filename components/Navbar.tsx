@@ -6,8 +6,8 @@ import { useState } from "react";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/adventures", label: "Adventures" },
-  { href: "/about", label: "About" },
+  { href: "/gallery", label: "Photos & Videos" },
+  { href: "/specifications", label: "Features & Specs" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -28,7 +28,7 @@ export default function Navbar() {
             className="font-display text-xl font-bold text-navy tracking-tight"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Boatlatina
+            Scirocco
           </span>
         </Link>
 

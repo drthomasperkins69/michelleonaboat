@@ -17,16 +17,16 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Boatlatina",
-    template: "%s | Boatlatina",
+    default: "Scirocco — 51ft Dyna 50 Mediterranean Cruiser For Sale",
+    template: "%s | Scirocco For Sale",
   },
   description:
-    "A photo journal of life on the water — cruising the Queensland coast and the Whitsundays aboard Scirocco.",
+    "Scirocco — a 51ft Dyna 50 (circa 1993) Mediterranean cruiser for sale at Horizon Shores Marina, Jacobs Well. Twin 559hp Detroit diesels, completely overhauled. $320,000 AUD.",
   openGraph: {
-    title: "Boatlatina",
+    title: "Scirocco — 51ft Dyna 50 Mediterranean Cruiser For Sale",
     description:
-      "A photo journal of life on the water — cruising the Queensland coast and the Whitsundays aboard Scirocco.",
-    images: ["/images/ai-hero.png"],
+      "Twin 559hp Detroit diesels, 2 cabins, 2 bathrooms, flybridge entertaining deck. Recently and completely overhauled. $320,000 AUD.",
+    images: ["/images/scirocco-1.jpg"],
   },
 };
 
