@@ -36,8 +36,8 @@ export default function SpecificationsPage() {
           <div className="relative">
             <div className="aspect-square relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/scirocco-2.jpg"
-                alt={`${boat.name}, ${boat.model} ${boat.year}`}
+                src="/images/scirocco-lounge.jpg"
+                alt={`${boat.name} lounge, ${boat.model} ${boat.year}`}
                 fill
                 priority
                 sizes="(min-width: 768px) 50vw, 100vw"

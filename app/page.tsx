@@ -19,7 +19,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden">
         <Image
-          src="/images/scirocco-1.jpg"
+          src="/images/scirocco-hero.jpg"
           alt={`${boat.name} — ${boat.model} ${boat.year} motor cruiser`}
           fill
           priority
@@ -128,8 +128,8 @@ export default function Home() {
           </div>
           <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
             <Image
-              src="/images/scirocco-2.jpg"
-              alt={`${boat.name} profile`}
+              src="/images/scirocco-stern.jpg"
+              alt={`${boat.name} stern and swim platform`}
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
               className="object-cover"

@@ -59,7 +59,15 @@ export default function GalleryPage() {
                 className="bg-white rounded-2xl overflow-hidden shadow-sm"
               >
                 <div className="relative aspect-video">
-                  {video.src ? (
+                  {video.youtubeId ? (
+                    <iframe
+                      className="w-full h-full"
+                      src={`https://www.youtube.com/embed/${video.youtubeId}`}
+                      title={video.caption}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    />
+                  ) : video.src ? (
                     <video controls className="w-full h-full object-cover" preload="metadata">
                       <source src={video.src} />
                     </video>

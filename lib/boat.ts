@@ -96,31 +96,54 @@ export const featureSections: FeatureSection[] = [
 export type GalleryPhoto = {
   id: string;
   caption: string;
-  category: "Exterior" | "Flybridge" | "Living" | "Galley" | "Cabins" | "Extras";
+  category:
+    | "Exterior"
+    | "Flybridge"
+    | "Living"
+    | "Galley"
+    | "Cabins"
+    | "Systems"
+    | "Extras";
   src?: string; // when omitted, a styled placeholder is shown
 };
 
-// A few real shots of Scirocco are already in the repo; the rest are
-// placeholders ready for the owner's photos.
 export const galleryPhotos: GalleryPhoto[] = [
-  { id: "ext-1", caption: "Scirocco on the water", category: "Exterior", src: "/images/scirocco-1.jpg" },
+  // Exterior
+  { id: "ext-hero", caption: "Scirocco — starboard profile", category: "Exterior", src: "/images/scirocco-hero.jpg" },
+  { id: "ext-stern", caption: "Stern, swim platform & dinghy", category: "Exterior", src: "/images/scirocco-stern.jpg" },
+  { id: "ext-bow", caption: "Bow & foredeck", category: "Exterior", src: "/images/scirocco-bow.jpg" },
+  { id: "ext-1", caption: "On the water", category: "Exterior", src: "/images/scirocco-1.jpg" },
   { id: "ext-2", caption: "Profile view", category: "Exterior", src: "/images/scirocco-2.jpg" },
-  { id: "ext-3", caption: "At anchor", category: "Exterior", src: "/images/scirocco-3.jpg" },
-  { id: "ext-4", caption: "Bow & foredeck", category: "Exterior" },
+  { id: "ext-3", caption: "At the marina", category: "Exterior", src: "/images/scirocco-3.jpg" },
+
+  // Flybridge — photos to come
   { id: "fly-1", caption: "Flybridge entertainment area", category: "Flybridge" },
   { id: "fly-2", caption: "Upper helm station", category: "Flybridge" },
-  { id: "fly-3", caption: "Top deck seating & wet bar", category: "Flybridge" },
-  { id: "liv-1", caption: "Lounge", category: "Living" },
-  { id: "liv-2", caption: "Dining area", category: "Living" },
-  { id: "liv-3", caption: "Back deck", category: "Living" },
-  { id: "gal-1", caption: "Galley", category: "Galley" },
-  { id: "gal-2", caption: "Galley storage & appliances", category: "Galley" },
-  { id: "cab-1", caption: "Master cabin", category: "Cabins" },
-  { id: "cab-2", caption: "Second cabin", category: "Cabins" },
-  { id: "cab-3", caption: "Bathroom one", category: "Cabins" },
-  { id: "cab-4", caption: "Bathroom two", category: "Cabins" },
-  { id: "ext-5", caption: "5m x 5m inflatable pool", category: "Extras" },
-  { id: "ext-6", caption: "Electric BBQ on the back deck", category: "Extras" },
+
+  // Living
+  { id: "liv-lounge", caption: "Lounge", category: "Living", src: "/images/scirocco-lounge.jpg" },
+  { id: "liv-saloon", caption: "Saloon — entertainment system & TV", category: "Living", src: "/images/scirocco-saloon.jpg" },
+  { id: "liv-backdeck", caption: "Back deck", category: "Living" },
+
+  // Galley
+  { id: "gal-1", caption: "Galley — cooktop & microwave", category: "Galley", src: "/images/scirocco-galley-1.jpg" },
+  { id: "gal-2", caption: "Galley — fridge/freezer, coffee machine & sink", category: "Galley", src: "/images/scirocco-galley-2.jpg" },
+
+  // Cabins & bathrooms
+  { id: "cab-1", caption: "Master cabin", category: "Cabins", src: "/images/scirocco-cabin-1.jpg" },
+  { id: "cab-2", caption: "Master cabin — another angle", category: "Cabins", src: "/images/scirocco-cabin-2.jpg" },
+  { id: "cab-3", caption: "Forward guest cabin", category: "Cabins", src: "/images/scirocco-cabin-3.jpg" },
+  { id: "cab-4", caption: "Guest cabin — portlights & settee", category: "Cabins", src: "/images/scirocco-cabin-4.jpg" },
+  { id: "bath-1", caption: "Bathroom — vanity & WC", category: "Cabins", src: "/images/scirocco-bathroom-1.jpg" },
+  { id: "bath-2", caption: "Bathroom — shower & vanity", category: "Cabins", src: "/images/scirocco-bathroom-2.jpg" },
+  { id: "bath-3", caption: "Ensuite shower", category: "Cabins", src: "/images/scirocco-bathroom-3.jpg" },
+
+  // Systems — recent overhaul
+  { id: "sys-1", caption: "New Victron electrical system & battery bank", category: "Systems", src: "/images/scirocco-electrical.jpg" },
+
+  // Included extras — photos to come
+  { id: "extra-pool", caption: "5m x 5m inflatable pool", category: "Extras" },
+  { id: "extra-bbq", caption: "Electric BBQ on the back deck", category: "Extras" },
 ];
 
 export const photoCategories = [
@@ -130,6 +153,7 @@ export const photoCategories = [
   "Living",
   "Galley",
   "Cabins",
+  "Systems",
   "Extras",
 ] as const;
 
@@ -137,10 +161,18 @@ export type GalleryVideo = {
   id: string;
   caption: string;
   description: string;
-  src?: string; // when omitted, a styled placeholder is shown
+  youtubeId?: string; // YouTube video to embed
+  src?: string; // local video file; when both omitted, a placeholder is shown
 };
 
 export const galleryVideos: GalleryVideo[] = [
+  {
+    id: "vid-original-tour",
+    caption: "Video tour of Scirocco",
+    description:
+      "An earlier walkthrough video of this exact boat — a great look around inside and out.",
+    youtubeId: "C1oOZzgG-hU",
+  },
   {
     id: "vid-walkthrough",
     caption: "Full walkthrough tour",
