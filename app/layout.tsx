@@ -16,6 +16,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://sciroccoboat.com"),
   title: {
     default: "Scirocco — 51ft Dyna 50 Mediterranean Cruiser For Sale",
     template: "%s | Scirocco For Sale",
