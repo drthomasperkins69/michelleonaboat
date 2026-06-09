@@ -165,33 +165,37 @@ export type GalleryVideo = {
   src?: string; // local video file; when both omitted, a placeholder is shown
 };
 
+// Walkthrough series from the "Scirocco Boat" YouTube channel.
 export const galleryVideos: GalleryVideo[] = [
   {
+    id: "vid-dyna50-1",
+    caption: "Scirocco — Dyna 50: Part 1",
+    description: "Walkthrough of Scirocco, the 51ft Dyna 50 motor cruiser — part 1.",
+    youtubeId: "JF1Wb0SlbR0",
+  },
+  {
+    id: "vid-dyna50-2",
+    caption: "Scirocco — Dyna 50: Part 2",
+    description: "Walkthrough of Scirocco — part 2.",
+    youtubeId: "9Gejzqqtwbk",
+  },
+  {
+    id: "vid-dyna50-3",
+    caption: "Scirocco — Dyna 50: Part 3",
+    description: "Walkthrough of Scirocco — part 3.",
+    youtubeId: "8SF5bh5_4QA",
+  },
+  {
+    id: "vid-dyna50-4",
+    caption: "Scirocco — Dyna 50: Part 4",
+    description: "Walkthrough of Scirocco — part 4.",
+    youtubeId: "jprNIimf2dg",
+  },
+  {
     id: "vid-original-tour",
-    caption: "Video tour of Scirocco",
-    description:
-      "An earlier walkthrough video of this exact boat — a great look around inside and out.",
+    caption: "Earlier video tour",
+    description: "An earlier walkthrough video of this exact boat.",
     youtubeId: "C1oOZzgG-hU",
-  },
-  {
-    id: "vid-walkthrough",
-    caption: "Full walkthrough tour",
-    description: "A complete walk from the back deck through the galley, lounge and cabins.",
-  },
-  {
-    id: "vid-flybridge",
-    caption: "Flybridge & entertainment area",
-    description: "The top deck entertaining space and upper helm.",
-  },
-  {
-    id: "vid-engines",
-    caption: "Engines running",
-    description: "Twin 559hp Detroit diesels — freshly rebuilt — at start-up and idle.",
-  },
-  {
-    id: "vid-cruising",
-    caption: "Out on the water",
-    description: "Scirocco underway and at anchor.",
   },
 ];
 
