@@ -98,7 +98,7 @@ export default function Home() {
         <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
           <iframe
             className="absolute inset-0 w-full h-full"
-            src="https://www.youtube.com/embed/8SF5bh5_4QA"
+            src="https://www.youtube.com/embed/jprNIimf2dg?start=10"
             title="Scirocco — Dyna 50 walkthrough"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
