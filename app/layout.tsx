@@ -22,11 +22,11 @@ export const metadata: Metadata = {
     template: "%s | Scirocco For Sale",
   },
   description:
-    "Scirocco — a 51ft Dyna 50 (circa 1993) Mediterranean cruiser for sale at Horizon Shores Marina, Jacobs Well. Twin 559hp Detroit diesels, completely overhauled. $320,000 AUD.",
+    "Scirocco — a 51ft Dyna 50 (circa 1993) Mediterranean cruiser for sale at Horizon Shores Marina, Jacobs Well. Twin 559hp Detroit diesels, completely overhauled. $299,999 AUD.",
   openGraph: {
     title: "Scirocco — 51ft Dyna 50 Mediterranean Cruiser For Sale",
     description:
-      "Twin 559hp Detroit diesels, 2 cabins, 2 bathrooms, flybridge entertaining deck. Recently and completely overhauled. $320,000 AUD.",
+      "Twin 559hp Detroit diesels, 2 cabins, 2 bathrooms, flybridge entertaining deck. Recently and completely overhauled. $299,999 AUD.",
     images: ["/images/scirocco-1.jpg"],
   },
 };

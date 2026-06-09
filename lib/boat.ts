@@ -7,7 +7,7 @@ export const boat = {
   model: "Dyna 50",
   year: "circa 1993",
   tagline: "A 51ft Mediterranean cruiser, completely overhauled and ready to go",
-  price: "$320,000",
+  price: "$299,999",
   currency: "AUD",
   berth: "Horizon Shores Marina, Jacobs Well",
   location: "Queensland, Australia",
