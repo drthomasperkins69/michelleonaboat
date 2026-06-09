@@ -82,6 +82,40 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Featured video */}
+      <section className="px-6 py-16 max-w-5xl mx-auto">
+        <div className="text-center mb-8">
+          <p className="text-sm font-semibold uppercase tracking-widest mb-2" style={{ color: "var(--color-teal)" }}>
+            Watch
+          </p>
+          <h2
+            className="text-3xl md:text-4xl font-bold"
+            style={{ fontFamily: "var(--font-display)", color: "var(--color-navy)" }}
+          >
+            Video Walkthrough
+          </h2>
+        </div>
+        <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
+          <iframe
+            className="absolute inset-0 w-full h-full"
+            src="https://www.youtube.com/embed/8SF5bh5_4QA"
+            title="Scirocco — Dyna 50 walkthrough"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+        </div>
+        <div className="text-center mt-6">
+          <Link
+            href="/gallery"
+            className="inline-flex items-center gap-1 font-semibold transition-colors group"
+            style={{ color: "var(--color-teal)" }}
+          >
+            See more photos & videos{" "}
+            <span className="group-hover:translate-x-1 transition-transform">→</span>
+          </Link>
+        </div>
+      </section>
+
       {/* Quick specs */}
       <section className="py-12 border-y" style={{ backgroundColor: "var(--color-cream)", borderColor: "var(--color-sand)" }}>
         <div className="max-w-6xl mx-auto px-6">
