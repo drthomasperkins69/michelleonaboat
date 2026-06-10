@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import ContactForm from "./ContactForm";
 import { boat, seller } from "@/lib/boat";
 
@@ -123,6 +124,32 @@ export default function ContactPage() {
 
           {/* Right: form */}
           <ContactForm />
+        </div>
+      </section>
+
+      {/* Introduce yourself CTA */}
+      <section className="px-6 pb-8">
+        <div
+          className="max-w-4xl mx-auto rounded-2xl p-8 md:p-10 text-center text-white"
+          style={{ backgroundColor: "var(--color-teal)" }}
+        >
+          <h2
+            className="text-2xl md:text-3xl font-bold mb-3"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            Serious about Scirocco?
+          </h2>
+          <p className="mb-6 leading-relaxed" style={{ color: "rgba(255,255,255,0.9)" }}>
+            Introduce yourself as a prospective buyer — a few details about you
+            help {seller.name} get to know you before an inspection.
+          </p>
+          <Link
+            href="/introduce"
+            className="inline-block bg-white font-semibold px-8 py-3.5 rounded-full transition-transform hover:scale-105 text-sm"
+            style={{ color: "var(--color-navy)" }}
+          >
+            Introduce Yourself →
+          </Link>
         </div>
       </section>
 
