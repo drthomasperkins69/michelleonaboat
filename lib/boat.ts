@@ -204,7 +204,7 @@ export const seller = {
   name: "Thomas Perkins",
   phone: "0419 172 527",
   phoneHref: "tel:0419172527",
-  email: "veteranshealthcentre@gmail.com",
+  email: "boatscirocco@gmail.com",
   inspections: "Available for inspections on Sunday afternoons",
   berth: "Horizon Shores Marina, Jacobs Well, QLD",
 };

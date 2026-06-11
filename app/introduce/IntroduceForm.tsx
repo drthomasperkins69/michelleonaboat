@@ -7,8 +7,13 @@ const inputClass =
   "w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:border-transparent transition-all";
 const labelClass = "block text-sm font-semibold mb-1.5";
 
+// FormSubmit delivers the submission as an email to the seller's inbox.
+const ENDPOINT = `https://formsubmit.co/ajax/${seller.email}`;
+
 export default function IntroduceForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">(
+    "idle"
+  );
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -23,31 +28,36 @@ export default function IntroduceForm() {
       setForm((f) => ({ ...f, [field]: e.target.value }));
   }
 
-  function buildBody() {
-    return [
-      `Name: ${form.name}`,
-      `Phone: ${form.phone}`,
-      `Facebook profile: ${form.facebook}`,
-      `Occupation (self): ${form.occupation}`,
-      `Occupation (partner): ${form.partnerOccupation || "—"}`,
-      "",
-      "Introduction:",
-      form.introduction,
-    ].join("\n");
-  }
-
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const subject = `Buyer introduction — ${boat.name} (${boat.model})`;
-    const mailto = `mailto:${seller.email}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(buildBody())}`;
-    // Open the visitor's email client pre-filled with their introduction.
-    window.location.href = mailto;
-    setSubmitted(true);
+    setStatus("loading");
+    try {
+      const res = await fetch(ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          _subject: `Buyer introduction — ${boat.name} (${boat.model})`,
+          _template: "table",
+          _captcha: "false",
+          Name: form.name,
+          Phone: form.phone,
+          "Facebook profile": form.facebook,
+          "Occupation (self)": form.occupation,
+          "Occupation (partner)": form.partnerOccupation || "—",
+          Introduction: form.introduction,
+        }),
+      });
+      if (res.ok) {
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   }
 
-  if (submitted) {
+  if (status === "success") {
     return (
       <div className="rounded-2xl p-8 text-center" style={{ backgroundColor: "var(--color-cream)" }}>
         <div className="text-6xl mb-6">⚓</div>
@@ -57,26 +67,15 @@ export default function IntroduceForm() {
         >
           Thank you!
         </h3>
-        <p className="text-gray-600 leading-relaxed max-w-md mx-auto mb-6">
-          Your email app should have opened with your introduction ready to
-          send to {seller.name}. If it didn&apos;t, please copy the details
-          below and email them to{" "}
-          <a
-            href={`mailto:${seller.email}`}
-            className="font-semibold underline"
-            style={{ color: "var(--color-navy)" }}
-          >
-            {seller.email}
-          </a>
-          , or call {seller.name} on{" "}
+        <p className="text-gray-600 leading-relaxed max-w-md mx-auto">
+          Your introduction has been sent to {seller.name}. He&apos;ll be in
+          touch to arrange an inspection. If you&apos;d like to reach him
+          sooner, give him a call on{" "}
           <a href={seller.phoneHref} className="font-semibold underline" style={{ color: "var(--color-navy)" }}>
             {seller.phone}
           </a>
           .
         </p>
-        <pre className="text-left text-sm bg-white rounded-xl p-4 border border-gray-200 whitespace-pre-wrap text-gray-700">
-          {buildBody()}
-        </pre>
       </div>
     );
   }
@@ -175,16 +174,27 @@ export default function IntroduceForm() {
         />
       </div>
 
+      {status === "error" && (
+        <p className="text-sm text-red-600">
+          Something went wrong sending your introduction. Please try again, or
+          email {seller.name} directly at{" "}
+          <a href={`mailto:${seller.email}`} className="font-semibold underline">
+            {seller.email}
+          </a>
+          .
+        </p>
+      )}
+
       <button
         type="submit"
-        className="w-full text-white font-semibold py-4 rounded-xl transition-all duration-200 text-sm tracking-wide"
+        disabled={status === "loading"}
+        className="w-full text-white font-semibold py-4 rounded-xl transition-all duration-200 text-sm tracking-wide disabled:opacity-70"
         style={{ backgroundColor: "var(--color-navy)" }}
       >
-        Send Introduction
+        {status === "loading" ? "Sending…" : "Send Introduction"}
       </button>
       <p className="text-xs text-gray-400 text-center">
-        Submitting opens your email app with the details ready to send to{" "}
-        {seller.name}.
+        Your details are emailed directly to {seller.name}.
       </p>
     </form>
   );
